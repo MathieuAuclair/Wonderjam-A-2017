@@ -2,12 +2,13 @@
 using System.Collections;
 using UnityEditor;
 
+// Analysis disable once CheckNamespace
 public class SelectAllOfTag : ScriptableWizard 
 {
 
 	public string searchTag = "Your tag here";
 
-	[MenuItem ("ObjectManager/Select All Of Tag...")]
+	[MenuItem ("MoistyTools/Select All Of Tag...")]
 	static void SelectAllOfTagWizard()
 	{
 		ScriptableWizard.DisplayWizard<SelectAllOfTag> ("Select All Of Tag...", "Make Selection");
