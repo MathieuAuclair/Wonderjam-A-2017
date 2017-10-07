@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Power 
+public class Power : MonoBehaviour
 {
 
     Rigidbody rb;
-    GameObject gameobject;
-    public Power(GameObject gameobject)
+    GameObject characterGameObject;
+    public Power(GameObject characterObject)
     {
-        this.gameobject = gameobject;
-        rb = gameobject.GetComponent<Rigidbody>();
+        this.characterGameObject = characterObject;
+        rb = characterObject.GetComponent<Rigidbody>();
     }
 
 
@@ -26,5 +26,28 @@ public class Power
     public void Attack()
     {
        
+    }
+
+
+
+    /*heritage copied from the net and adapred*/
+
+    public virtual void SpecialPower()
+    {
+        //Do stuff
+    }
+}
+public class JetPack : Power 
+{
+    GameObject gameObjetcInstance;
+
+    public JetPack (GameObject object1) : base  (object1)
+    {
+
+    }
+
+    public override void SpecialPower()
+    {
+        //Do stuff
     }
 }
