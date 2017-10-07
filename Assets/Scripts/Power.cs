@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Analysis disable once CheckNamespace
+
 public class Power{
 	public int powerUpForce;
 	protected GameObject characterGameObject;
@@ -32,11 +33,24 @@ public class JetPack : Power
 
 
 // Analysis disable once CheckNamespace
-public class SuperSmash : Power 
+public class SuperSmash : Power
 {
-	public SuperSmash (GameObject characterBody) : base  (characterBody){}
+    public SuperSmash(GameObject characterBody) : base(characterBody) { }
 
-	public override void SpecialPower(){
-		//TODO need to add marc-antoine power smash
-	}
+    public override void SpecialPower()
+    {
+        //TODO need to add marc-antoine power smash
+    }
+}
+
+
+// Analysis disable once CheckNamespace
+public class SuperSpeed : Power
+{
+    public SuperSpeed(GameObject characterBody) : base(characterBody) { }
+
+    public override void SpecialPower()
+    {
+        //TODO need to add marc-antoine power smash
+    }
 }
