@@ -1,82 +1,26 @@
-<<<<<<< HEAD
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class charcaterController : MonoBehaviour
-{
-    Rigidbody rb;
-    public float speed;
-    private Power power;
-    
-    public charcaterController()
-    {
-        
-    }
+// Analysis disable once CheckNamespace
+public class charcaterController : MonoBehaviour{
+	private Power powerUp;
+    private Rigidbody rb;
+	public float speed;
+
     // Use this for initialization
-    void Start()
-    {
-        power = new Power(this.gameObject);
-        rb = gameObject.GetComponent<Rigidbody>();
-        speed = 10;
+    void Start(){
+		rb = gameObject.GetComponent<Rigidbody>();
+		powerUp = new Power(gameObject);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        deplacement();
-        power.jump();
-    }
-    void deplacement()
-    {
-        float depHorizontal = Input.GetAxis("Horizontal");
-        float depVertical = Input.GetAxis("Vertical");
-        Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
+    void Update(){
+		float depHorizontal = Input.GetAxis("Horizontal");
+		float depVertical = Input.GetAxis("Vertical");
+		Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
 
-        rb.AddForce(mouvement * speed );
-
-    }
-}
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class charcaterController : MonoBehaviour
-{
-    Rigidbody rb;
-    public float speed;
-    private Power power;
-    
-    public charcaterController()
-    {
-        
-    }
-    // Use this for initialization
-    void Start()
-    {
-        power = new Power(this.gameObject);
-        rb = gameObject.GetComponent<Rigidbody>();
-        speed = 10;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        deplacement();
-        power.jump();
-        if (Input.GetButtonDown("Fire1"))
-        {
-            power.Attack();
-        }
-    }
-    void deplacement()
-    {
-        float depHorizontal = Input.GetAxis("Horizontal");
-        float depVertical = Input.GetAxis("Vertical");
-        Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
-
-        rb.AddForce(mouvement * speed );
+		//transform.position += (mouvement * speed);
 
     }
 }

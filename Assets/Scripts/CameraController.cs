@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Analysis disable once CheckNamespace
 public class CameraController : MonoBehaviour {
 
     // Use this for initialization

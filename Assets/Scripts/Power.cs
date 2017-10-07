@@ -3,74 +3,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Power 
-{
+// Analysis disable once CheckNamespace
+public class Power{
+	public int powerUpForce;
+	protected GameObject characterGameObject;
+	protected Rigidbody rb;
 
-    Rigidbody rb;
-    GameObject gameobject;
-    public Power(GameObject gameobject)
-    {
-        this.gameobject = gameobject;
-        rb = gameobject.GetComponent<Rigidbody>();
-    }
+    public Power(GameObject characterBody){
+		characterGameObject = characterBody;
+		rb = characterGameObject.GetComponent<Rigidbody> ();
+	}
 
-
-    public void jump()
-    {
-       
-    }
+	public virtual void SpecialPower(){
+		//override void
+	}
 }
 	
 // Analysis disable once CheckNamespace
 public class JetPack : Power 
 {
-    GameObject gameObjetcInstance;
-	Rigidbody rb;
-
-	int jumpForce;
-
-	public int getJumpForce(){
-		return jumpForce;
-	}
-
-	public void setJumpForce(int force){
-		jumpForce = force;
-	}
-
-    public JetPack (GameObject characterBody) : base  (characterBody)
-    {
-		gameObjetcInstance = characterBody;
-		rb = gameObjetcInstance.GetComponent<Rigidbody>();
-    }
+    public JetPack (GameObject characterBody) : base  (characterBody){}
 
     public override void SpecialPower(){
+		int jumpForce = powerUpForce * 100;
 		rb.AddForce (new Vector3(0,jumpForce,0));
     }
 }
 
 
+// Analysis disable once CheckNamespace
 public class SuperSmash : Power 
 {
-	GameObject gameObjetcInstance;
-	Rigidbody rb;
-
-	int jumpForce;
-
-	public int getJumpForce(){
-		return jumpForce;
-	}
-
-	public void setJumpForce(int force){
-		jumpForce = force;
-	}
-
-	public SuperSmash (GameObject characterBody) : base  (characterBody)
-	{
-		gameObjetcInstance = characterBody;
-		rb = gameObjetcInstance.GetComponent<Rigidbody>();
-	}
+	public SuperSmash (GameObject characterBody) : base  (characterBody){}
 
 	public override void SpecialPower(){
-		rb.AddForce (new Vector3(0,jumpForce,0));
+		//TODO need to add marc-antoine power smash
 	}
 }
