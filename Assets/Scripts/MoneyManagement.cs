@@ -4,12 +4,24 @@ using UnityEngine;
 using System.IO;
 
 public class MoneyManagement : MonoBehaviour {
+    EndGame cEndGame;
     List<string> lstEvent;
+<<<<<<< HEAD
     public int money{ get; private set; }
+=======
+    List<int> lstPastGames;
+>>>>>>> Master
 
+    int money;
+    int timesLostMoney;
     // Use this for initialization
     void Awake () {
+        cEndGame = new EndGame();
+
         lstEvent = new List<string>();
+        lstPastGames = new List<int>();
+        money = 100000;
+        timesLostMoney = 0;
 
         lstEvent.Add("You have water in the basement. Because this is a game, repairs will be instantanious, but it will cost you");
         lstEvent.Add("You saw a spider and it scared you. You lost precious wokring hours crying to your mom.");
@@ -31,6 +43,16 @@ public class MoneyManagement : MonoBehaviour {
         lstEvent.Add("You know that coworker's bean bag you just broke? Turns out it was stuffed with cocaine... and now you have to buy him another one.");
         lstEvent.Add("Keeping a fire extinguisher around is good for your safety in case of a fire… except when it is filled with jet fuel.");
         lstEvent.Add("Your dog decided it is now his house. you can go and buy another one");
+
+        /* the past games list is a decoy
+         * remove once database is implemented
+         */
+
+        lstPastGames.Add(13);
+        lstPastGames.Add(15);
+        lstPastGames.Add(2);
+        lstPastGames.Add(21);
+
     }
 	
 	// Update is called once per frame
@@ -40,7 +62,12 @@ public class MoneyManagement : MonoBehaviour {
 
     void moneyLoss(int loss)
     {
-        money -= loss;
+        if (CheckEndGame(loss) == false)
+        {
+            timesLostMoney++;
+            money -= loss;
+        }
+
     }
 
     void moneyGain(int gain)
@@ -52,8 +79,8 @@ public class MoneyManagement : MonoBehaviour {
 
     public string RandomEvents()
     {
-        int lowerMargin = money / 10;
-        int higherMargin = money / 10 * 9;
+        int lowerMargin = 1000;
+        int higherMargin = 10000;
         int lostMoney = Random.Range(lowerMargin, higherMargin);
         //random money loss displayed here
 
@@ -62,4 +89,49 @@ public class MoneyManagement : MonoBehaviour {
         Debug.Log(index);
         return lstEvent[index];
     }
+
+    public bool CheckEndGame(int loss)
+    {
+        /* checks if money gets into the negative. 
+         * if it is the case, return true else return false
+         */
+
+        if (loss > money)
+        {
+            cEndGame.EndGameFunction( timesLostMoney, lstPastGames);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
+
+public class EndGame
+{
+
+ 
+
+    public void EndGameFunction(int daysSurvived, List<int> lstScores)
+    {
+        int bestScore = findHighScore(lstScores);
+        Debug.Log("You survived " + daysSurvived + " the previous highscore was " + bestScore);
+        /*end game here*/
+
+    }
+
+    int findHighScore(List<int> lstScores)
+    {
+        int lenght = lstScores.Count;
+        int highscore = 0;
+        for (int i = 0; i < lenght; i++)
+        {
+            if (highscore < lstScores[i])
+                highscore = lstScores[i];
+        }
+        return highscore;
+
+    }
+}
+

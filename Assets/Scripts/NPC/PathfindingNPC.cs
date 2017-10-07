@@ -13,19 +13,16 @@ public class PathfindingNPC : MonoBehaviour {
 	void Start (){
 		indexDestination = 0;
 		agent = GetComponent<NavMeshAgent>();
+		agent.SetDestination (Destinations[0].transform.position);
 	}
 
 	void Update (){
-		agent.SetDestination (Destinations[indexDestination].transform.position);
-	}
-
-	//loop the destinations
-	void OnTriggerEnter(Collider other){
-		if(other == Destinations[indexDestination]){
+		if (agent.remainingDistance < 1) {
 			indexDestination++;
 			if (indexDestination == Destinations.Count) {
 				indexDestination = 0;
 			}
-		}
+			agent.SetDestination (Destinations[indexDestination].transform.position);
+		} 
 	}
 }
