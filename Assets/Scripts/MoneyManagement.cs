@@ -6,7 +6,11 @@ using System.IO;
 public class MoneyManagement : MonoBehaviour {
     EndGame cEndGame;
     List<string> lstEvent;
+<<<<<<< HEAD
+    public int money{ get; private set; }
+=======
     List<int> lstPastGames;
+>>>>>>> Master
 
     int money;
     int timesLostMoney;
@@ -71,12 +75,14 @@ public class MoneyManagement : MonoBehaviour {
         money += gain;
     }
 
+    
+
     public string RandomEvents()
     {
         int lowerMargin = 1000;
         int higherMargin = 10000;
         int lostMoney = Random.Range(lowerMargin, higherMargin);
-        //random money loss diaplayed here
+        //random money loss displayed here
 
         Debug.Log("lstEvent.Lengh " + lstEvent.Count);
         int index = Random.Range(0, lstEvent.Count - 1);
