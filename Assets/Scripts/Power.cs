@@ -48,6 +48,8 @@ public class JetPack : Power
 
     public override void SpecialPower()
     {
-        //Do stuff
+      
+
+
     }
 }
