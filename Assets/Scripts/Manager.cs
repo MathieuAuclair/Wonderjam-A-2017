@@ -7,7 +7,7 @@ public class Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         moneyManager = gameObject.GetComponent<MoneyManagement>();
-        Debug.Log (moneyManager.RandomEvents());
+        Debug.Log (moneyManager.CheckEndGame(100001));
     }
 
     // Update is called once per frame
