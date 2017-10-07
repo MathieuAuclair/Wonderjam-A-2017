@@ -25,6 +25,10 @@ public class charcaterController : MonoBehaviour
     {
         deplacement();
         power.jump();
+        if (Input.GetButtonDown("Fire1"))
+        {
+            power.Attack();
+        }
     }
     void deplacement()
     {
