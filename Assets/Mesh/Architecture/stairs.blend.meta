@@ -6,10 +6,24 @@ ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Collider
+    100004: Stairs
+    100006: stairs_collider
     400000: //RootNode
+    400002: Collider
+    400004: Stairs
+    400006: stairs_collider
     2300000: //RootNode
+    2300002: Collider
+    2300004: Stairs
+    2300006: stairs_collider
     3300000: //RootNode
+    3300002: Collider
+    3300004: Stairs
+    3300006: stairs_collider
     4300000: Stairs
+    4300002: Collider
+    4300004: stairs_collider
     7400000: Default Take
     9500000: //RootNode
   materials:

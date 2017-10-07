@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 160f34a0d22aee243b4a1f5d877395fe
-timeCreated: 1507405569
+guid: 1b83c1d597115d945bfc6653759a149d
+timeCreated: 1507405272
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: chair
+    4300000: Sphere
     7400000: Default Take
     9500000: //RootNode
   materials:
