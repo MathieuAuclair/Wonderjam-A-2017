@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+// Analysis disable once CheckNamespace
 public class MoneyManagement : MonoBehaviour {
     EndGame cEndGame;
     List<string> lstEvent;
-<<<<<<< HEAD
+	List<int> lstPastGames;
     public int money{ get; private set; }
-=======
-    List<int> lstPastGames;
->>>>>>> Master
 
-    int money;
     int timesLostMoney;
     // Use this for initialization
     void Awake () {
@@ -108,6 +105,7 @@ public class MoneyManagement : MonoBehaviour {
     }
 }
 
+// Analysis disable once CheckNamespace
 public class EndGame
 {
 
