@@ -5,6 +5,8 @@ using UnityEngine;
 public class charcaterController : MonoBehaviour
 {
     public float speed = 10.0F;
+    public Rigidbody rb;
+    private Power power;
 
     void Start()
     {
@@ -13,6 +15,8 @@ public class charcaterController : MonoBehaviour
 
     void Update()
     {
+        power = new Power(this.gameObject);
+        rb = gameObject.GetComponent<Rigidbody>();
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
@@ -22,5 +26,7 @@ public class charcaterController : MonoBehaviour
 
         if (Input.GetKeyDown("escape"))
             Cursor.lockState = CursorLockMode.None;
+        power.jump();
     }
+    
 }
