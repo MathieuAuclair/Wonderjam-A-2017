@@ -80,4 +80,3 @@ public class charcaterController : MonoBehaviour
 
     }
 }
->>>>>>> 2b11d842668cc732826fce59efaac5503e715de4

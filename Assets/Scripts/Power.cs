@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,67 +17,60 @@ public class Power
 
     public void jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-            rb.AddForce(0, 100, 0);
-        }
-    }
-}
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Power : MonoBehaviour
-{
-
-    Rigidbody rb;
-    GameObject characterGameObject;
-    public Power(GameObject characterObject)
-    {
-        this.characterGameObject = characterObject;
-        rb = characterObject.GetComponent<Rigidbody>();
-    }
-
-
-    public void jump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-            rb.AddForce(0, 100, 0);
-        }
-    }
-
-    public void Attack()
-    {
        
     }
-
-
-
-    /*heritage copied from the net and adapred*/
-
-    public virtual void SpecialPower()
-    {
-        //Do stuff
-    }
 }
+	
+// Analysis disable once CheckNamespace
 public class JetPack : Power 
 {
     GameObject gameObjetcInstance;
+	Rigidbody rb;
 
-    public JetPack (GameObject object1) : base  (object1)
+	int jumpForce;
+
+	public int getJumpForce(){
+		return jumpForce;
+	}
+
+	public void setJumpForce(int force){
+		jumpForce = force;
+	}
+
+    public JetPack (GameObject characterBody) : base  (characterBody)
     {
-
+		gameObjetcInstance = characterBody;
+		rb = gameObjetcInstance.GetComponent<Rigidbody>();
     }
 
-    public override void SpecialPower()
-    {
-      
-
-
+    public override void SpecialPower(){
+		rb.AddForce (new Vector3(0,jumpForce,0));
     }
 }
->>>>>>> 2b11d842668cc732826fce59efaac5503e715de4
+
+
+public class SuperSmash : Power 
+{
+	GameObject gameObjetcInstance;
+	Rigidbody rb;
+
+	int jumpForce;
+
+	public int getJumpForce(){
+		return jumpForce;
+	}
+
+	public void setJumpForce(int force){
+		jumpForce = force;
+	}
+
+	public SuperSmash (GameObject characterBody) : base  (characterBody)
+	{
+		gameObjetcInstance = characterBody;
+		rb = gameObjetcInstance.GetComponent<Rigidbody>();
+	}
+
+	public override void SpecialPower(){
+		rb.AddForce (new Vector3(0,jumpForce,0));
+	}
+}
