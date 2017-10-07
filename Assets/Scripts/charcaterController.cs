@@ -4,39 +4,23 @@ using UnityEngine;
 
 public class charcaterController : MonoBehaviour
 {
-    Rigidbody rb;
-    public float speed;
-    private Power power;
-    
-    public charcaterController()
-    {
-        
-    }
-    // Use this for initialization
+    public float speed = 10.0F;
+
     void Start()
     {
-        power = new Power(this.gameObject);
-        rb = gameObject.GetComponent<Rigidbody>();
-        speed = 10;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        deplacement();
-        power.jump();
-        if (Input.GetButtonDown("Fire1"))
-        {
-            power.Attack();
-        }
-    }
-    void deplacement()
-    {
-        //float depHorizontal = Input.GetAxis("Horizontal");
-        //float depVertical = Input.GetAxis("Vertical");
-        //Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
+        float translation = Input.GetAxis("Vertical") * speed;
+        float straffe = Input.GetAxis("Horizontal") * speed;
+        translation *= Time.deltaTime;
+        straffe *= Time.deltaTime;
 
-        //rb.AddForce(mouvement * speed );
+        transform.Translate(straffe, 0, translation);
 
+        if (Input.GetKeyDown("escape"))
+            Cursor.lockState = CursorLockMode.None;
     }
 }
