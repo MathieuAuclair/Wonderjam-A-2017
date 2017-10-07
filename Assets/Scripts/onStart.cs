@@ -7,12 +7,22 @@ public class onStart : MonoBehaviour {
     public Text money;
     private MoneyManagement moneySystem;
 	// Use this for initialization
-	void Start () {
-        money.text = "Money : " + moneySystem.money + "$";
+	void Awake () {
+        moneySystem = new MoneyManagement();
+        moneySystem.money = 5000;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Update()
+    {
+        money.text = "Money : " + moneySystem.money + "$"; 
+    }
+
+    public void lossMoney(int loss)
+    {
+        moneySystem.moneyLoss(loss);
+    }
+
+    public void gainMoney(int gain)
+    {
+        moneySystem.moneyGain(gain);
+    }
 }
