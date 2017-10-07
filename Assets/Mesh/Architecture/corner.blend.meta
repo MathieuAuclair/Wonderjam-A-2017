@@ -1,22 +1,15 @@
 fileFormatVersion: 2
-guid: 4d232c15b8bca9343b328276da29714b
-timeCreated: 1507379565
+guid: e6e53788be3a3cf4dabe3e06c5e99c25
+timeCreated: 1507384680
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Leaves
-    100002: //RootNode
-    100004: Trunk
-    400000: Leaves
-    400002: //RootNode
-    400004: Trunk
-    2300000: Leaves
-    2300002: Trunk
-    3300000: Leaves
-    3300002: Trunk
-    4300000: Leaves
-    4300002: Trunk
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
   materials:
