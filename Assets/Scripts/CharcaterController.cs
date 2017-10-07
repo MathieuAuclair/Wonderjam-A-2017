@@ -8,19 +8,10 @@ public class CharcaterController : MonoBehaviour
 {
     public float speed = 10.0F;
     public Rigidbody rb;
-    private Power power;
-
-
-    Dictionary<string, Type> LePetitRobert;
+	public Power power;
 
     void Start(){
-        //TODO check to set a random PowerUP
-        LePetitRobert = new Dictionary<string, Type>();
-        LePetitRobert.Add("SuperSmash", typeof(SuperSmash));
-        LePetitRobert.Add("JetPack", typeof(JetPack));
-        LePetitRobert.Add("SuperSpeed", typeof(SuperSpeed));
         Cursor.lockState = CursorLockMode.Locked;
-        
     }
 
     void Update()
