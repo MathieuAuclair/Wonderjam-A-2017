@@ -32,11 +32,11 @@ public class charcaterController : MonoBehaviour
     }
     void deplacement()
     {
-        float depHorizontal = Input.GetAxis("Horizontal");
-        float depVertical = Input.GetAxis("Vertical");
-        Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
+        //float depHorizontal = Input.GetAxis("Horizontal");
+        //float depVertical = Input.GetAxis("Vertical");
+        //Vector3 mouvement = new Vector3(depHorizontal, 0, depVertical);
 
-        rb.AddForce(mouvement * speed );
+        //rb.AddForce(mouvement * speed );
 
     }
 }
