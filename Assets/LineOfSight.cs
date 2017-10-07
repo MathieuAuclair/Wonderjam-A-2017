@@ -27,8 +27,8 @@ public class LineOfSight : MonoBehaviour {
 
                 if (Input.GetKeyDown (KeyCode.Mouse0) && !isgrabbed)
                 {
-                    Vector3 push = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
-                    vision.rigidbody.AddForce(push* 100);
+                    Vector3 push = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
+                    vision.rigidbody.AddForce(-vision.normal* 10000);
                 }
             }
         }
