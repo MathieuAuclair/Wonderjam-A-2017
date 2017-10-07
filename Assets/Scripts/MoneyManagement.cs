@@ -4,12 +4,12 @@ using UnityEngine;
 using System.IO;
 
 public class MoneyManagement : MonoBehaviour {
+    List<string> lstEvent;
     int money;
-    List<string> lstEvent = new List<string>();
-   
-    // Use this for initialization
-	void Start () {
 
+    // Use this for initialization
+    void Awake () {
+        lstEvent = new List<string>();
 
         lstEvent.Add("You have water in the basement. Because this is a game, repairs will be instantanious, but it will cost you");
         lstEvent.Add("You saw a spider and it scared you. You lost precious wokring hours crying to your mom.");
@@ -48,10 +48,16 @@ public class MoneyManagement : MonoBehaviour {
         money += gain;
     }
 
-    void randomEvents()
+    public string RandomEvents()
     {
         int lowerMargin = money / 10;
         int higherMargin = money / 10 * 9;
         int lostMoney = Random.Range(lowerMargin, higherMargin);
+        //random money loss diaplayed here
+
+        Debug.Log("lstEvent.Lengh " + lstEvent.Count);
+        int index = Random.Range(0, lstEvent.Count - 1);
+        Debug.Log(index);
+        return lstEvent[index];
     }
 }
