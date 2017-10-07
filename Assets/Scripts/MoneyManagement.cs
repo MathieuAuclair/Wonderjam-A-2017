@@ -5,7 +5,7 @@ using System.IO;
 
 public class MoneyManagement : MonoBehaviour {
     List<string> lstEvent;
-    int money;
+    public int money{ get; private set; }
 
     // Use this for initialization
     void Awake () {
@@ -48,12 +48,14 @@ public class MoneyManagement : MonoBehaviour {
         money += gain;
     }
 
+    
+
     public string RandomEvents()
     {
         int lowerMargin = money / 10;
         int higherMargin = money / 10 * 9;
         int lostMoney = Random.Range(lowerMargin, higherMargin);
-        //random money loss diaplayed here
+        //random money loss displayed here
 
         Debug.Log("lstEvent.Lengh " + lstEvent.Count);
         int index = Random.Range(0, lstEvent.Count - 1);
