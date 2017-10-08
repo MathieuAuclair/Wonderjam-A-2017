@@ -346,7 +346,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7cb2912222469634ba17a77055919ea8, type: 3}
-    m_FontSize: 44
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -357,13 +357,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "The year is 2044, and Ivanka Trump is president of the United States. She
-    has single handedly managed to instore lasting peace on a global level with the
-    help of super-heroes, thus making advocates obsolete. Furthermore, all inequalities
-    have vanished. Therefore, all the super-heroes have become unemployed overnight.
-    What the Marvel movies have not told you is that most of these heroes have not
-    yet graduated high school. All our heroes are now working low income basic jobs,
-    and it is up to you to save them from bankruptcy. \r"
+  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et dui
+    in lorem pellentesque aliquet vitae at nibh. Proin at tortor imperdiet, maximus
+    felis nec, ornare eros. Donec vulputate at purus sit amet porta. Donec et ipsum
+    nec quam pulvinar suscipit vel at turpis. Aliquam bibendum iaculis mi, quis convallis
+    ante commodo non. Nunc varius ipsum vitae fermentum congue. Ut tempus nulla elit,
+    ac auctor turpis placerat quis.
 --- !u!222 &844972592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -675,7 +674,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a398863d6790b341a0534f2bef02f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: {fileID: 0}
 --- !u!1 &2130551854
 GameObject:
   m_ObjectHideFlags: 0

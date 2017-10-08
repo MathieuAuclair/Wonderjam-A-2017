@@ -1,22 +1,29 @@
 fileFormatVersion: 2
-guid: 4d232c15b8bca9343b328276da29714b
-timeCreated: 1507379565
+guid: 1bb36bf86f30f7241af08b9724c98e03
+timeCreated: 1507348410
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
-    100000: Leaves
-    100002: //RootNode
-    100004: Trunk
-    400000: Leaves
-    400002: //RootNode
-    400004: Trunk
-    2300000: Leaves
-    2300002: Trunk
-    3300000: Leaves
-    3300002: Trunk
-    4300000: Leaves
-    4300002: Trunk
+    100000: //RootNode
+    100002: Tree
+    100004: Tree_001
+    100006: Tree_002
+    400000: //RootNode
+    400002: Tree
+    400004: Tree_001
+    400006: Tree_002
+    2300000: //RootNode
+    2300002: Tree
+    2300004: Tree_001
+    2300006: Tree_002
+    3300000: //RootNode
+    3300002: Tree
+    3300004: Tree_001
+    3300006: Tree_002
+    4300000: Tree
+    4300002: Tree_002
+    4300004: Tree_001
     7400000: Default Take
     9500000: //RootNode
   materials:

@@ -13,13 +13,10 @@ ModelImporter:
     400004: Tree_002
     2300000: Tree_000
     2300002: Tree_002
-    2300004: //RootNode
     3300000: Tree_000
     3300002: Tree_002
-    3300004: //RootNode
     4300000: Tree_000
     4300002: Tree_002
-    4300004: Tree
     7400000: Default Take
     9500000: //RootNode
   materials:
