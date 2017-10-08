@@ -8,7 +8,8 @@ public class ManagerVille : MonoBehaviour {
 	GameObject playerGameObject;
 
 	void Start(){
-		playerGameObject = Instantiate (Resources.Load("Player"), transform.position, Quaternion.identity) as GameObject;
+		Quaternion rotation = Quaternion.EulerAngles(new Vector3(-90,0,0));
+		playerGameObject = Instantiate (Resources.Load("Player"), transform.position, rotation) as GameObject;
 	}
 
 }
