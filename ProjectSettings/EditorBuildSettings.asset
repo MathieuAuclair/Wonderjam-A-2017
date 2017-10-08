@@ -17,3 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AbandonScene.unity
     guid: 501a418205f0d4542b9226de038e98e0
+  - enabled: 1
+    path: Assets/Scenes/OfficeScene.unity
+    guid: e75fc41d504f66c4c98ebad2facc4204
+  - enabled: 0
+    path: Assets/Scenes/scene.unity
+    guid: 7556347da831d554db7aea66993509ce
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 7c348a05499fd4a869469243d5d65e19
+  - enabled: 1
+    path: Assets/Unity UI Menu/Scenes/RenderTexture.unity
+    guid: d5545059c6381d848ab3d612c68f2669

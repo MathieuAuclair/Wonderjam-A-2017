@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EndGameTrigger.cs" />
+     <Compile Include="Assets\ScenarioOffice.cs" />
      <Compile Include="Assets\Scripts\CarController.cs" />
      <Compile Include="Assets\Scripts\CharacterController\CameraController.cs" />
      <Compile Include="Assets\Scripts\CharacterController\CharacterController.cs" />

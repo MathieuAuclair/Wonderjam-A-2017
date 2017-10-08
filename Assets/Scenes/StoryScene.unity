@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -357,12 +357,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et dui
-    in lorem pellentesque aliquet vitae at nibh. Proin at tortor imperdiet, maximus
-    felis nec, ornare eros. Donec vulputate at purus sit amet porta. Donec et ipsum
-    nec quam pulvinar suscipit vel at turpis. Aliquam bibendum iaculis mi, quis convallis
-    ante commodo non. Nunc varius ipsum vitae fermentum congue. Ut tempus nulla elit,
-    ac auctor turpis placerat quis.
+  m_Text: 'La nouvelle presidente a fait baisser le taux de criminalite jusqu''a ce
+    qu''il soit null, je suis desoler holk, mais on doit te virer....
+
+
+    j''imagine que tu sera utile quelque part ailleur... '
 --- !u!222 &844972592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -417,6 +416,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -674,6 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a398863d6790b341a0534f2bef02f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: {fileID: 0}
 --- !u!1 &2130551854
 GameObject:
   m_ObjectHideFlags: 0

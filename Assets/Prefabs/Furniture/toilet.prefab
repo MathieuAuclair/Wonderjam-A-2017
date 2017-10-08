@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33863802656196604}
   - component: {fileID: 23326177182773960}
   - component: {fileID: 64540507404994338}
+  - component: {fileID: 54627729877701454}
   m_Layer: 0
   m_Name: toilet
   m_TagString: Untagged
@@ -81,6 +82,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261826951634298}
   m_Mesh: {fileID: 4300000, guid: b8f66e7c29b3365449522c896cf25e3b, type: 3}
+--- !u!54 &54627729877701454
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261826951634298}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64540507404994338
 MeshCollider:
   m_ObjectHideFlags: 1
