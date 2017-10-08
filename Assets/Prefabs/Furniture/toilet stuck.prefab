@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 198299288188637512}
   - component: {fileID: 199119992979418180}
   m_Layer: 0
-  m_Name: toilet
+  m_Name: toilet stuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
