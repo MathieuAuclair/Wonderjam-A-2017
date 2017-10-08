@@ -36,7 +36,7 @@ namespace UnityStandardAssets.Vehicles.Car
         [SerializeField] private float m_RevRangeBoundary = 1f;
         [SerializeField] private float m_SlipLimit;
         [SerializeField] private float m_BrakeTorque;
-
+        public float discance;
         private Quaternion[] m_WheelMeshLocalRotations;
         private Vector3 m_Prevpos, m_Pos;
         private float m_SteerAngle;
@@ -58,6 +58,7 @@ namespace UnityStandardAssets.Vehicles.Car
         // Use this for initialization
         private void Start()
         {
+            discance = 0;
             m_WheelMeshLocalRotations = new Quaternion[4];
             for (int i = 0; i < 4; i++)
             {
@@ -69,8 +70,73 @@ namespace UnityStandardAssets.Vehicles.Car
 
             m_Rigidbody = GetComponent<Rigidbody>();
             m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
-        }
+            //
 
+            player2 = GameObject.Find("Player");
+            player1 = GameObject.Find("controllable car");
+
+            cam3 = GameObject.Find("Camera");
+            cam1 = GameObject.Find("Main Camera");
+           
+            
+
+            cam1.tag = "MainCamera";
+            cam3.tag = "Camera 2";
+            //
+        }
+        //
+
+        public GameObject player1;
+        public GameObject player2;
+
+        public GameObject cam3;
+        public GameObject cam1;
+        private bool verifcam = true;
+        
+
+        void Update()
+        {
+            discance = Vector3.Distance(player1.transform.position, player2.transform.position);
+            if (Input.GetKeyDown(KeyCode.X))    //"O" for "Other" or "Other Player" 
+            {
+                if (verifcam)
+                {
+                    player1.GetComponent<Rigidbody>().isKinematic = true;
+                    player2.GetComponent<Rigidbody>().isKinematic = false;
+
+                    player2.transform.position = new Vector3(player1.transform.position.x+2, player1.transform.position.y, player1.transform.position.y);
+
+
+
+                    cam1.SetActive(false);
+                    cam3.SetActive(true);
+
+                    cam1.tag = "Camera 2";
+                    cam3.tag = "MainCamera";
+                    verifcam = false;
+
+                }
+                else if(!verifcam && discance < 5)
+                {
+                    player2.GetComponent<Rigidbody>().isKinematic = true;
+                    player1.GetComponent<Rigidbody>().isKinematic = false;
+
+                    player2.transform.position = new Vector3(0, -10, 0);
+
+
+                    cam3.SetActive(false);
+                    cam1.SetActive(true);
+
+                    cam3.tag = "Camera 2";
+                    cam1.tag = "MainCamera";
+                    verifcam = true;
+
+                }
+                
+            }
+            
+        }
+        //
 
         private void GearChanging()
         {
@@ -279,7 +345,7 @@ namespace UnityStandardAssets.Vehicles.Car
                 // is the tire slipping above the given threshhold
                 if (Mathf.Abs(wheelHit.forwardSlip) >= m_SlipLimit || Mathf.Abs(wheelHit.sidewaysSlip) >= m_SlipLimit)
                 {
-                    m_WheelEffects[i].EmitTyreSmoke();
+                    //m_WheelEffects[i].EmitTyreSmoke();
 
                     // avoiding all four tires screeching at the same time
                     // if they do it can lead to some strange audio artefacts
