@@ -1,3 +1,14 @@
+<<<<<<< HEAD:Assets/Skybox/Cubemaps/Materials/005-free-hdri-skies-com 2.mat.meta
+fileFormatVersion: 2
+guid: ab34db2eca94f734aa9756ed7d5713a0
+timeCreated: 1507353204
+licenseType: Free
+NativeFormatImporter:
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
 fileFormatVersion: 2
 guid: 759d7127fa56a8742bcb5e7611271354
 timeCreated: 1507395466
@@ -7,3 +18,4 @@ NativeFormatImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> c1f430f648b689f85e765b731a6f783ffcc36a4e:Assets/Mesh/Furniture/Materials/Desk.mat.meta

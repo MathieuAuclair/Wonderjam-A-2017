@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LoadSceneOnClick : MonoBehaviour {
 
-	public void loadByIndex(int sceneIndex)
-    {
+	public void loadByIndex(int sceneIndex){
+		DontDestroyOnLoad (GameObject.Find("GameManager"));
         SceneManager.LoadScene(sceneIndex);
     }
 }
