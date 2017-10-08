@@ -4,21 +4,20 @@ using UnityEngine;
 using System.IO;
 
 // Analysis disable once CheckNamespace
-public class MoneyManagement {
+public class MoneyManagement : MonoBehaviour {
     EndGame cEndGame;
     List<string> lstEvent;
 	List<int> lstPastGames;
-    public int money{ get;  set; }
+    public int money{ get; private set; }
 
     int timesLostMoney;
     // Use this for initialization
-
-    public MoneyManagement()
-    {
+    void Awake () {
         cEndGame = new EndGame();
 
         lstEvent = new List<string>();
         lstPastGames = new List<int>();
+        money = 100000;
         timesLostMoney = 0;
 
         lstEvent.Add("You have water in the basement. Because this is a game, repairs will be instantanious, but it will cost you");
@@ -52,17 +51,23 @@ public class MoneyManagement {
         lstPastGames.Add(21);
 
     }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 
-    public void moneyLoss(int loss)
+    void moneyLoss(int loss)
     {
         if (CheckEndGame(loss) == false)
         {
             timesLostMoney++;
             money -= loss;
         }
+
     }
 
-    public void moneyGain(int gain)
+    void moneyGain(int gain)
     {
         money += gain;
     }
@@ -71,14 +76,14 @@ public class MoneyManagement {
 
     public string RandomEvents()
     {
-        int lowerMargin = 10;
-        int higherMargin = 100;
+        int lowerMargin = 1000;
+        int higherMargin = 10000;
         int lostMoney = Random.Range(lowerMargin, higherMargin);
         //random money loss displayed here
 
-        //Debug.Log("lstEvent.Lengh " + lstEvent.Count);
+        Debug.Log("lstEvent.Lengh " + lstEvent.Count);
         int index = Random.Range(0, lstEvent.Count - 1);
-        //Debug.Log(index);
+        Debug.Log(index);
         return lstEvent[index];
     }
 
@@ -103,10 +108,15 @@ public class MoneyManagement {
 // Analysis disable once CheckNamespace
 public class EndGame
 {
-    public string EndGameFunction(int daysSurvived, List<int> lstScores)
+
+ 
+
+    public void EndGameFunction(int daysSurvived, List<int> lstScores)
     {
-        return "You survived " + daysSurvived + " the previous highscore was " + findHighScore(lstScores);
+        int bestScore = findHighScore(lstScores);
+        Debug.Log("You survived " + daysSurvived + " the previous highscore was " + bestScore);
         /*end game here*/
+
     }
 
     int findHighScore(List<int> lstScores)
@@ -119,6 +129,7 @@ public class EndGame
                 highscore = lstScores[i];
         }
         return highscore;
+
     }
 }
 

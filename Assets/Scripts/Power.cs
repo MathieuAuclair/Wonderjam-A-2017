@@ -22,9 +22,4 @@ public class Power
             rb.AddForce(0, 100, 0);
         }
     }
-
-    public void Attack()
-    {
-       
-    }
 }
