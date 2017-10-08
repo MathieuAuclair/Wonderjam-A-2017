@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1810294263993010}
+  m_RootGameObject: {fileID: 1997485852381996}
   m_IsPrefabParent: 1
---- !u!1 &1810294263993010
+--- !u!1 &1997485852381996
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4773706656669790}
-  - component: {fileID: 33930302609201292}
-  - component: {fileID: 23199275325615960}
-  - component: {fileID: 64899234824981518}
-  - component: {fileID: 54676654392655352}
+  - component: {fileID: 4838451773339360}
+  - component: {fileID: 33463486698418432}
+  - component: {fileID: 23744068430501690}
+  - component: {fileID: 54589972612573712}
+  - component: {fileID: 135617946794780734}
   m_Layer: 0
-  m_Name: house1
+  m_Name: Bush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4773706656669790
+--- !u!4 &4838451773339360
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810294263993010}
-  m_LocalRotation: {x: -0.00000009415696, y: 0.7071068, z: 0.7071067, w: 0.00000009415697}
-  m_LocalPosition: {x: 2.1400244, y: 0.00000013955062, z: 0.9093641}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1997485852381996}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -110.23677, y: -0.00000037336605, z: -92.86798}
+  m_LocalScale: {x: 1.0818434, y: 1.0818434, z: 1.0818434}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23199275325615960
+--- !u!23 &23744068430501690
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810294263993010}
+  m_GameObject: {fileID: 1997485852381996}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,10 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6ac109ebab9be2f43afbad52265c3d82, type: 2}
-  - {fileID: 2100000, guid: c21f0ce305ff6214ea5a247ca3279470, type: 2}
-  - {fileID: 2100000, guid: 687ba905244a3f045b1b20097f912a21, type: 2}
-  - {fileID: 2100000, guid: 561139dd58141a448bd368b260eb3d92, type: 2}
+  - {fileID: 2100000, guid: bfdafbeb32071814697368ce342ecdfd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,19 +75,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33930302609201292
+--- !u!33 &33463486698418432
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810294263993010}
-  m_Mesh: {fileID: 4300004, guid: fc512fea59a244178aed3297a68ee133, type: 3}
---- !u!54 &54676654392655352
+  m_GameObject: {fileID: 1997485852381996}
+  m_Mesh: {fileID: 4300000, guid: eaf47182cfc706e469dad5be4fa2e2f0, type: 3}
+--- !u!54 &54589972612573712
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810294263993010}
+  m_GameObject: {fileID: 1997485852381996}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -100,17 +97,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64899234824981518
-MeshCollider:
+--- !u!135 &135617946794780734
+SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1810294263993010}
+  m_GameObject: {fileID: 1997485852381996}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
-  m_InflateMesh: 0
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300004, guid: fc512fea59a244178aed3297a68ee133, type: 3}
+  m_Radius: 0.8759515
+  m_Center: {x: -0.0071574748, y: -0.011659476, z: 0.62788665}
