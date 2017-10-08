@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 // Analysis disable once CheckNamespace
 public class PathfindingNPC : MonoBehaviour {
-	public List<GameObject> Destinations;
+	public GameObject Destinations;
 
 	private NavMeshAgent agent;
 	private int indexDestination;
@@ -13,16 +13,13 @@ public class PathfindingNPC : MonoBehaviour {
 	void Start (){
 		indexDestination = 0;
 		agent = GetComponent<NavMeshAgent>();
-		agent.SetDestination (Destinations[0].transform.position);
+		agent.SetDestination (Destinations.transform.GetChild(0).position);
 	}
 
 	void Update (){
-		if (agent.remainingDistance < 1) {
-			indexDestination++;
-			if (indexDestination == Destinations.Count) {
-				indexDestination = 0;
-			}
-			agent.SetDestination (Destinations[indexDestination].transform.position);
+		if (agent.remainingDistance < 5) {
+			indexDestination = Random.Range(0,Destinations.transform.childCount);
+			agent.SetDestination (Destinations.transform.GetChild(indexDestination).position);
 		} 
 	}
 }
