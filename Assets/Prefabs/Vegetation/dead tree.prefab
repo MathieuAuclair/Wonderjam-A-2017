@@ -9,63 +9,34 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
-  m_RootGameObject: {fileID: 1182775077447456}
+  m_RootGameObject: {fileID: 1269531050091156}
   m_IsPrefabParent: 1
---- !u!1 &1028301128908038
-=======
-  m_RootGameObject: {fileID: 1615719882808064}
-  m_IsPrefabParent: 1
---- !u!1 &1615719882808064
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+--- !u!1 &1207634499572612
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
-  - component: {fileID: 4362535983284468}
-  - component: {fileID: 33766196835866594}
-  - component: {fileID: 23560095001746020}
-  - component: {fileID: 64887128011198718}
+  - component: {fileID: 4863551423665890}
+  - component: {fileID: 33292869246104944}
+  - component: {fileID: 23914858094983110}
   m_Layer: 0
-  m_Name: Trunk
+  m_Name: Tree_000
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1092448358680702
+--- !u!1 &1269531050091156
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4344988230191962}
-  - component: {fileID: 33262558598377530}
-  - component: {fileID: 23983665189508346}
-  m_Layer: 0
-  m_Name: Leaves
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1182775077447456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4898576898662810}
-=======
-  - component: {fileID: 4869427506282604}
-  - component: {fileID: 33341849231968214}
-  - component: {fileID: 23982954708563590}
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+  - component: {fileID: 4143224069750016}
+  - component: {fileID: 64490533268062836}
   m_Layer: 0
   m_Name: dead tree
   m_TagString: Untagged
@@ -73,71 +44,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
---- !u!4 &4344988230191962
+--- !u!1 &1431942886891368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4906096839624326}
+  - component: {fileID: 33540541619673596}
+  - component: {fileID: 23721810206469102}
+  m_Layer: 0
+  m_Name: Tree_002
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4143224069750016
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1092448358680702}
-  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0.000000019868216, y: 7e-15, z: 0.00000016887984}
-  m_LocalScale: {x: -4.9494276, y: -4.9494276, z: -3.370753}
-  m_Children: []
-  m_Father: {fileID: 4898576898662810}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4362535983284468
-=======
---- !u!4 &4869427506282604
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
-  m_GameObject: {fileID: 1028301128908038}
-  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 0.000000019868216, y: 7e-15, z: 0.00000016887984}
-=======
-  m_GameObject: {fileID: 1615719882808064}
-  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
-  m_LocalPosition: {x: 5.247279, y: -0.00000041184103, z: 5.884735}
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
-  m_LocalScale: {x: -4.9494276, y: -4.9494276, z: -3.370753}
-  m_Children: []
-  m_Father: {fileID: 4898576898662810}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4898576898662810
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1182775077447456}
+  m_GameObject: {fileID: 1269531050091156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.76, y: -0.00000037498137, z: 11.43}
+  m_LocalPosition: {x: 21.311932, y: 0.00000030833783, z: -0.15656391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4344988230191962}
-  - {fileID: 4362535983284468}
+  - {fileID: 4863551423665890}
+  - {fileID: 4906096839624326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
---- !u!23 &23560095001746020
-=======
---- !u!23 &23982954708563590
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+--- !u!4 &4863551423665890
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207634499572612}
+  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+  m_LocalPosition: {x: 0.000000019868216, y: 7e-15, z: 0.00000016887984}
+  m_LocalScale: {x: -4.9494276, y: -4.9494276, z: -3.370753}
+  m_Children: []
+  m_Father: {fileID: 4143224069750016}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4906096839624326
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1431942886891368}
+  m_LocalRotation: {x: -4.32978e-17, y: 0.7071067, z: 0.7071068, w: -4.3297806e-17}
+  m_LocalPosition: {x: 0.000000019868216, y: 7e-15, z: 0.00000016887984}
+  m_LocalScale: {x: -4.9494276, y: -4.9494276, z: -3.370753}
+  m_Children: []
+  m_Father: {fileID: 4143224069750016}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23721810206469102
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
-  m_GameObject: {fileID: 1028301128908038}
-=======
-  m_GameObject: {fileID: 1615719882808064}
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+  m_GameObject: {fileID: 1431942886891368}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23914858094983110
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1207634499572612}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -146,7 +148,6 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 2100000, guid: 4e9b68662a910f54892a539d4904a10a, type: 2}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -165,74 +166,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23983665189508346
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1092448358680702}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: bfdafbeb32071814697368ce342ecdfd, type: 2}
-=======
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
---- !u!33 &33262558598377530
+--- !u!33 &33292869246104944
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1092448358680702}
-  m_Mesh: {fileID: 4300000, guid: 4d232c15b8bca9343b328276da29714b, type: 3}
---- !u!33 &33766196835866594
-=======
---- !u!33 &33341849231968214
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+  m_GameObject: {fileID: 1207634499572612}
+  m_Mesh: {fileID: 4300000, guid: 3acd6a97812cd7b468f40f1b6b64f6ef, type: 3}
+--- !u!33 &33540541619673596
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Prefabs/tree.prefab
-  m_GameObject: {fileID: 1028301128908038}
-  m_Mesh: {fileID: 4300002, guid: 4d232c15b8bca9343b328276da29714b, type: 3}
---- !u!64 &64887128011198718
+  m_GameObject: {fileID: 1431942886891368}
+  m_Mesh: {fileID: 4300002, guid: 3acd6a97812cd7b468f40f1b6b64f6ef, type: 3}
+--- !u!64 &64490533268062836
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1028301128908038}
+  m_GameObject: {fileID: 1269531050091156}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 1
+  m_Convex: 0
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300002, guid: 4d232c15b8bca9343b328276da29714b, type: 3}
-=======
-  m_GameObject: {fileID: 1615719882808064}
-  m_Mesh: {fileID: 4300004, guid: 3acd6a97812cd7b468f40f1b6b64f6ef, type: 3}
->>>>>>> e3c370cbc778744014217f540eea039d107667c5:Assets/Prefabs/Vegetation/dead tree.prefab
+  m_Mesh: {fileID: 0}
