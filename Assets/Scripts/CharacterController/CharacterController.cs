@@ -1,33 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 // Analysis disable once CheckNamespace
-public class CharacterController : MonoBehaviour
-{
-    public float speed = 10.0F;
-    public Rigidbody rb;
-    private Power power;
+public class CharacterController : MonoBehaviour {
+	public float speed = 15.0f;
+	public float jump = 200.0f;
 
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+	bool isReadyToJump;
+    Rigidbody rb;
 
-    void Update()
-    {
-        power = new Power(this.gameObject);
-        rb = gameObject.GetComponent<Rigidbody>();
-        float translation = Input.GetAxis("Vertical") * speed;
-        float straffe = Input.GetAxis("Horizontal") * speed;
-        translation *= Time.deltaTime;
-        straffe *= Time.deltaTime;
+    void Start() {
+		rb = gameObject.GetComponent<Rigidbody> ();
+		Cursor.lockState = CursorLockMode.Locked;
+		isReadyToJump = true;
+	}
 
-        transform.Translate(straffe, 0, translation);
+	void Update(){
+		if (Input.GetKeyDown ("escape")) {
+			Cursor.lockState = CursorLockMode.None;
+		} 
+	}
 
-        if (Input.GetKeyDown("escape"))
-            Cursor.lockState = CursorLockMode.None;
-        power.jump();
-    }
+    void FixedUpdate() {
+		float moveY = (isReadyToJump && Input.GetButtonDown("Jump")) ? 100 : 0;
+		float moveX = Input.GetAxis ("Horizontal") * speed;
+		float moveZ = Input.GetAxis ("Vertical") * speed;
+
+		rb.AddForce(0, moveY, 0);
+		transform.Translate (moveX, 0, moveZ);
+	}
     
+	void OnCollisionEnter(Collision other){
+		isReadyToJump = true;
+	}
+
+	void OnCollisionExit(Collision other){
+		isReadyToJump = false;
+	}
 }

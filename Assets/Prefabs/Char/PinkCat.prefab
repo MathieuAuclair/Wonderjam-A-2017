@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1885612816877846}
+  m_RootGameObject: {fileID: 1730501125449738}
   m_IsPrefabParent: 1
---- !u!1 &1885612816877846
+--- !u!1 &1730501125449738
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4541127469917456}
-  - component: {fileID: 33522782871070916}
-  - component: {fileID: 23065355680015088}
-  - component: {fileID: 64764127665791770}
-  - component: {fileID: 54381717478111716}
-  - component: {fileID: 65900192398001004}
+  - component: {fileID: 4435487214970666}
+  - component: {fileID: 33721057274921718}
+  - component: {fileID: 23146419266283700}
+  - component: {fileID: 64034512938937568}
+  - component: {fileID: 54147828573609716}
   m_Layer: 0
-  m_Name: bush
-  m_TagString: Hit
+  m_Name: PinkCat
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4541127469917456
+--- !u!4 &4435487214970666
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
+  m_GameObject: {fileID: 1730501125449738}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.39114, y: 0, z: -4.96}
-  m_LocalScale: {x: 1.0818434, y: 1.0818434, z: 1.0818434}
+  m_LocalPosition: {x: -1.3083758, y: 4.08991, z: 2.000896}
+  m_LocalScale: {x: 0.15994793, y: 0.15994793, z: 0.15994793}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23065355680015088
+--- !u!23 &23146419266283700
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
+  m_GameObject: {fileID: 1730501125449738}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -57,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bfdafbeb32071814697368ce342ecdfd, type: 2}
+  - {fileID: 2100000, guid: c1f06b70915a9ce41b22c253c83e6f2d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,51 +75,39 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33522782871070916
+--- !u!33 &33721057274921718
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
-  m_Mesh: {fileID: 4300000, guid: eaf47182cfc706e469dad5be4fa2e2f0, type: 3}
---- !u!54 &54381717478111716
+  m_GameObject: {fileID: 1730501125449738}
+  m_Mesh: {fileID: 4300000, guid: 1b83c1d597115d945bfc6653759a149d, type: 3}
+--- !u!54 &54147828573609716
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
+  m_GameObject: {fileID: 1730501125449738}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64764127665791770
+--- !u!64 &64034512938937568
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
+  m_GameObject: {fileID: 1730501125449738}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
+  m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: eaf47182cfc706e469dad5be4fa2e2f0, type: 3}
---- !u!65 &65900192398001004
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1885612816877846}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.751903, y: 1.7077173, z: 1.2557733}
-  m_Center: {x: -0.0071574748, y: -0.011659476, z: 0.62788665}
+  m_Mesh: {fileID: 4300000, guid: 1b83c1d597115d945bfc6653759a149d, type: 3}

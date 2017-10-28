@@ -1,9 +1,12 @@
-*/Library/*
-*/Temp/*
-*/Obj/*
+Library/*
+Temp/*
+Obj/*
 
 # Visual Studio 2015 cache directory
-*/.vs/*
+.vs/*
+
+#IntelliJ project settings
+.idea/*
 
 *.consulo/*
 *.csproj

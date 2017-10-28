@@ -7,8 +7,8 @@ using UnityEngine.AI;
 public class PathfindingNPC : MonoBehaviour {
 	public GameObject Destinations;
 
-	private NavMeshAgent agent;
-	private int indexDestination;
+	NavMeshAgent agent;
+	int indexDestination;
 
 	void Start (){
 		indexDestination = 0;
@@ -18,7 +18,10 @@ public class PathfindingNPC : MonoBehaviour {
 
 	void Update (){
 		if (agent.remainingDistance < 5) {
-			indexDestination = Random.Range(0,Destinations.transform.childCount);
+			indexDestination++;
+			if (indexDestination >= Destinations.transform.childCount) {
+				indexDestination = 0;
+			}
 			agent.SetDestination (Destinations.transform.GetChild(indexDestination).position);
 		} 
 	}

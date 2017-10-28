@@ -2,35 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LineOfSight : MonoBehaviour {
-    private RaycastHit vision;
+// Analysis disable once CheckNamespace
+public class LineOfSight : MonoBehaviour
+{
     public float raylentgh;
-    private bool isgrabbed;
-    private Rigidbody grabbedobject;
-    private float force;
-    private Camera fpsCam;
-    // Use this for initialization
-    void Start () {
-        raylentgh = 4.0f;
-        isgrabbed = false;
-        fpsCam = GetComponentInParent<Camera>();
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * raylentgh, Color.red, 0.5f);
-        if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out vision, raylentgh))
-        {
-           // if (vision.collider.tag == "Hit")
-            //{
-                Debug.Log(vision.collider.name);
 
-                if (Input.GetKeyDown (KeyCode.Mouse0) && !isgrabbed)
-                {
-                    Vector3 push = fpsCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
-                    vision.rigidbody.AddForce(-vision.normal* 10000);
-                }
-            //}
+    private RaycastHit vision;
+
+    private void Start()
+    {
+        raylentgh = 4.0f;
+    }
+
+    private void Update()
+    {
+        Debug.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * raylentgh, Color.green, 0.5f);
+        bool isInRange = Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out vision, raylentgh);
+
+        if (isInRange)
+        {
+            bool isPlayerPunching = (Input.GetKeyDown(KeyCode.Mouse0));
+            bool isPunchable = (vision.rigidbody != null);
+            
+            if (isPlayerPunching && isPunchable)
+            {
+                vision.rigidbody.AddForce(vision.normal * -10000);
+            }
         }
-	}
+    }
 }
